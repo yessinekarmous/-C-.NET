@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\bin\Debug\net6.0\Firstassignment.exe
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\bin\Debug\net6.0\Firstassignment.deps.json
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\bin\Debug\net6.0\Firstassignment.runtimeconfig.json
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\bin\Debug\net6.0\Firstassignment.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\bin\Debug\net6.0\Firstassignment.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\Firstassignment.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\Firstassignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\Firstassignment.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\Firstassignment.AssemblyInfo.cs
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\Firstassignment.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\Firstassignment.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\refint\Firstassignment.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\Firstassignment.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\Firstassignment.genruntimeconfig.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Firstassignment\obj\Debug\net6.0\ref\Firstassignment.dll
