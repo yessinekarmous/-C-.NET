@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\bin\Debug\net6.0\Fundemantels1.exe
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\bin\Debug\net6.0\Fundemantels1.deps.json
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\bin\Debug\net6.0\Fundemantels1.runtimeconfig.json
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\bin\Debug\net6.0\Fundemantels1.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\bin\Debug\net6.0\Fundemantels1.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\Fundemantels1.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\Fundemantels1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\Fundemantels1.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\Fundemantels1.AssemblyInfo.cs
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\Fundemantels1.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\Fundemantels1.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\refint\Fundemantels1.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\Fundemantels1.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\Fundemantels1.genruntimeconfig.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 1\Practice\Fundemantels1\obj\Debug\net6.0\ref\Fundemantels1.dll
