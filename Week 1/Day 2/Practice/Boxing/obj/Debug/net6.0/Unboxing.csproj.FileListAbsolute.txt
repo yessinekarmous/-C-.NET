@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\bin\Debug\net6.0\Unboxing.exe
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\bin\Debug\net6.0\Unboxing.deps.json
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\bin\Debug\net6.0\Unboxing.runtimeconfig.json
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\bin\Debug\net6.0\Unboxing.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\bin\Debug\net6.0\Unboxing.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\Unboxing.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\Unboxing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\Unboxing.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\Unboxing.AssemblyInfo.cs
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\Unboxing.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\Unboxing.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\refint\Unboxing.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\Unboxing.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\Unboxing.genruntimeconfig.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\Boxing\obj\Debug\net6.0\ref\Unboxing.dll
