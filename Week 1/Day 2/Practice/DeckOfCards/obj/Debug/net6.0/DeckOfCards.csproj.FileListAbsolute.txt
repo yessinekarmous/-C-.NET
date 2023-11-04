@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.exe
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.deps.json
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.runtimeconfig.json
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.AssemblyInfo.cs
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\refint\DeckOfCards.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.genruntimeconfig.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 1\Day 2\Practice\DeckOfCards\obj\Debug\net6.0\ref\DeckOfCards.dll

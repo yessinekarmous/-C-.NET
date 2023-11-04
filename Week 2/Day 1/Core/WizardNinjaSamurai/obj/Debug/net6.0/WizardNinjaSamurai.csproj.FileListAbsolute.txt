@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.exe
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.deps.json
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.runtimeconfig.json
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.AssemblyInfo.cs
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\refint\WizardNinjaSamurai.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.genruntimeconfig.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Core\WizardNinjaSamurai\obj\Debug\net6.0\ref\WizardNinjaSamurai.dll
