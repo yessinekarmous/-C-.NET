@@ -18,7 +18,7 @@ class Human
     }
      
     // Build Attack method
-    public int Attack(Human target)
+    public virtual int Attack(Human target)
     {
         int dmg = Strength * 3;
         target.Health -= dmg;
