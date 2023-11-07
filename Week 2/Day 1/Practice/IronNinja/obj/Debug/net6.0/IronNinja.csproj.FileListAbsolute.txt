@@ -1,0 +1,5 @@
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Practice\IronNinja\obj\Debug\net6.0\IronNinja.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Practice\IronNinja\obj\Debug\net6.0\IronNinja.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Practice\IronNinja\obj\Debug\net6.0\IronNinja.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Practice\IronNinja\obj\Debug\net6.0\IronNinja.AssemblyInfo.cs
+C:\Users\MSI\Desktop\-C-.NET\Week 2\Day 1\Practice\IronNinja\obj\Debug\net6.0\IronNinja.csproj.CoreCompileInputs.cache
