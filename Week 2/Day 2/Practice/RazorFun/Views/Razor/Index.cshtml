@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here are some delicious foods :</h1>
+    @{
+        string[] Food=new string[]{"Apple Pie","Pizza","Cinnamon Rolls","Lasagna","Donuts","Chocolate Cake","Burritos"};
+foreach(string OneFood in Food){
+    if(OneFood.StartsWith("C"))
+    { <p style="color:red">@OneFood</p>}
+   
+    else
+    {
+        <p>@OneFood</p>
+    }
+}
+}
+
+
+</body>
+</html>
