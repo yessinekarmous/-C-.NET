@@ -1,0 +1,28 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Portfolio2
+build_property.RootNamespace = Portfolio2
+build_property.ProjectDir = c:\Users\MSI\Desktop\-C-.NET\Week 3\Day 1\Practice\Portfolio2\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\MSI\Desktop\-C-.NET\Week 3\Day 1\Practice\Portfolio2
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/MSI/Desktop/-C-.NET/Week 3/Day 1/Practice/Portfolio2/Views/Portfolio/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXENvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MSI/Desktop/-C-.NET/Week 3/Day 1/Practice/Portfolio2/Views/Portfolio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MSI/Desktop/-C-.NET/Week 3/Day 1/Practice/Portfolio2/Views/Portfolio/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFByb2plY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

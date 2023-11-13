@@ -1,0 +1,18 @@
+*{
+    width: 1000px;
+
+}
+
+.Box{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+
+} 
+
+
+img{
+    width: 220px;
+    height: 250px;
+
+}
