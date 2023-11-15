@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using DSValidation.Models;
-namespace DSValidation.Controllers;
+using DojoSurveyMo.Models;
+
+namespace DojoSurveyMo.Controllers;
 
 public class HomeController : Controller
 {
@@ -11,21 +12,27 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
-     [HttpPost]       //type of request
-        [Route("result")]     //associated route string (exclude the leading /)
-        public IActionResult Index(User newUser)
+    public IActionResult Index()
         {
             
-            return View("Result",newUser);
+            return View();
         }
-
-        [HttpGet]       //type of request
-        [Route("result")]     //associated route string (exclude the leading /)
-        public ViewResult Result(User newUser)
+    
+    [HttpPost]       
+    [Route("result")]    
+    public IActionResult Process(Survey NewSurvey)
         {
-            return View(newUser);
+            
+            return View("Result",NewSurvey);
         }
+    
+    [HttpGet]     
+    [Route("result")]    
+        public ViewResult Result(Survey NewSurvey)
+        {
+            return View(NewSurvey);
+        }    
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
