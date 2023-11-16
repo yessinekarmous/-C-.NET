@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MSI\\Desktop\\-C-.NET\\Week 3\\Day 2\\DSValidation\\DSValidation.csproj",
+      "projectUniqueName": "C:\\Users\\MSI\\Desktop\\-C-.NET\\Week 3\\Day 2\\Core\\DSValidation\\DSValidation.csproj",
       "projectName": "DSValidation",
-      "projectPath": "C:\\Users\\MSI\\Desktop\\-C-.NET\\Week 3\\Day 2\\DSValidation\\DSValidation.csproj",
+      "projectPath": "C:\\Users\\MSI\\Desktop\\-C-.NET\\Week 3\\Day 2\\Core\\DSValidation\\DSValidation.csproj",
       "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MSI\\Desktop\\-C-.NET\\Week 3\\Day 2\\DSValidation\\obj\\",
+      "outputPath": "C:\\Users\\MSI\\Desktop\\-C-.NET\\Week 3\\Day 2\\Core\\DSValidation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config"

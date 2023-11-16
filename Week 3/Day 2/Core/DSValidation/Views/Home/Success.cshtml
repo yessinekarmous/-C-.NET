@@ -1,6 +1,38 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@model User
+<div class="text-center m-4">
+    <div action="result" method="post" style="border: 2px solid black;padding : 40px">
+    <h1>Submitted Info</h1>
+<div class="mb-3 row">
+    <label asp-for="Name" class="col-sm-2 col-form-label fw-bold"></label>
+    <div class="col-sm-10">
+    @Model.Name
+    </div>
+    </div>
+    
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="mb-3 row">
+    <label asp-for="location" class="col-sm-2 col-form-label fw-bold"></label>
+    <div class="col-sm-10">
+    @Model.location
+    </div>
+    </div>
+    
+
+<div class="mb-3 row">
+     <label asp-for="language" class="col-sm-2 col-form-label fw-bold"></label>
+    <div class="col-sm-10">
+    @Model.language
+    </div> 
+    </div>
+
+
+<div class="mb-3 row">
+    <label asp-for="comment" class="col-sm-2 col-form-label fw-bold"></label>
+    <div class="col-sm-10">
+    <p class="text-wrap">@Model.comment</p>
+    </div> 
+    </div>
+        <a href="/" class="btn btn-primary">Go Back</a>
+    </div>
+
+    </div>

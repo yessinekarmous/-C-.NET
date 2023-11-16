@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "se8EU6tg+9IFqgdZfpUd1cmH/KtrgOR7FhedDi4/Qs/5utBMx+nWLT7TWR/gWNPRcJsNhoHejiVFcbpycF40QQ==",
+  "dgSpecHash": "56N1SqfpSFaoGzZ92fmZaghk0zlKDi6MOZ4EppzcQZTbpmHkcNGk9hZZrFMlHjHHd1dniO/nroF/SH48JOU+dA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MSI\\Desktop\\-C-.NET\\Week 3\\Day 2\\DSValidation\\DSValidation.csproj",
+  "projectFilePath": "C:\\Users\\MSI\\Desktop\\-C-.NET\\Week 3\\Day 2\\Core\\DSValidation\\DSValidation.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

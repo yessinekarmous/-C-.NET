@@ -1,63 +1,53 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-@model User
+﻿@model User
 
+<form method="post" asp-action="Process" asp-controller="Home" class="text-center border border-black p-4 m-5">
 
-<form action="result" method="post" style="border: 2px solid black;padding : 40px">
-
-<div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Your Name</label>
+<div class="mb-3 row">
+    <label asp-for="Name" class="col-sm-2 col-form-label fw-bold"></label>
     <div class="col-sm-10">
-    <input asp-for="Name"  class="form-control"  id="inputEmail3" >
-    <span asp-validation-for="Name" class="text-danger"></span>
-</div>
-</div>
+    <input asp-for="Name"  class="form-control">
+    </div>
+<span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    
 
-<fieldset class="form-group">
-    <div class="row">
-    <legend class="col-form-label col-sm-2 pt-0">Dojo Location</legend>
+<div class="mb-3 row">
+     <label asp-for="location" class="col-sm-2 col-form-label fw-bold"></label>
     <div class="col-sm-10">
-        <select asp-for="location"  class="custom-select" id="inputGroupSelect02">
-            <option selected>San José</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-    <span asp-validation-for="location" class="text-danger"></span>        
+    <select asp-for="location" class="form-select">
+        <option value="San Jose">San Jose</option>
+        <option value="Germany">Germany</option>
+        <option value="Spain">Spain</option>
+        <option value="Tunisia">Tunisia</option>
+    </select>
     </div>
+    <span class="text-danger" asp-validation-for="location"></span>
     </div>
-</fieldset>
+    
 
-    <fieldset class="form-group">
-    <div class="row">
-    <legend class="col-form-label col-sm-2 pt-0">Favorite Language</legend>
+<div class="mb-3 row">
+     <label asp-for="language" class="col-sm-2 col-form-label fw-bold"></label>
     <div class="col-sm-10">
-        <select  asp-for="language"  class="custom-select" id="inputGroupSelect02">
-            <option selected>C#</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-          <span asp-validation-for="language" class="text-danger"></span>     
-        
+     <select asp-for="language" class="form-select">
+        <option value="C# ">C#</option>
+        <option value="JS">JS</option>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+    </select>
+    </div> 
+    <span class="text-danger" asp-validation-for="language"></span>
     </div>
-    </div>
-</fieldset>
 
-<div class="form-group ">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Comment (optional):</label>
+
+<div class="mb-3 row">
+    <label asp-for="comment" class="col-sm-2 col-form-label fw-bold"></label>
     <div class="col-sm-10">
-    <textarea name="comment" id="" cols="70" rows="10"></textarea>
-</div>
-</div>
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+    <textarea asp-for="comment" class="form-control" cols="20" rows="5"></textarea>
+    </div> 
+    <span class="text-danger" asp-validation-for="comment"></span>
     </div>
-  </div>
+
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
 </form>
-
-
-
-
