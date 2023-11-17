@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@* <script>
+    function refreshPage() {
+            location.reload();  }
+</script> *@
+
+<div class="text-center">
+    <h2 class="text-danger">Random Passcode @Context.Session.GetInt32("nbr") </h2>
+    <div>
+    @{  string word ="" ;
+        for(int i=0 ; i<14;i++){
+        Random random = new Random();
+        int randomNumber = random.Next('A', 'Z' + 1);
+        char randomLetter = (char)randomNumber;
+        word+= randomLetter ;
+    }}
+    @word
+    
+    </div>
+    <form action="/generate" method="post">
+    <button href="/generate" type="submit" class="btn btn-success">Generate</button>
+    </form>
+</div>
