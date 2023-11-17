@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -14,11 +14,8 @@
         char randomLetter = (char)randomNumber;
         word+= randomLetter ;
     }}
-    @word 
-    @* <input readonly name="word" value="@word"> *@
-    
+    @word     
     </div>
-   
-   <a href="/generate" class="btn btn-primary">Generate</a>
+<a href="/generate" class="btn btn-primary">Generate</a>
 
 </div>

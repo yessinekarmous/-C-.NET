@@ -1,0 +1,21 @@
+﻿<div >
+<div class="d-flex w-75 justify-content-center p-2">
+<p class="flex-item flex-grow-1"><strong>Fullness:</strong>&nbsp; @Context.Session.GetInt32("fullness")</p>
+<p class="flex-item flex-grow-1"><strong>Happiness:</strong>&nbsp;@Context.Session.GetInt32("happiness")</p>
+<p class="flex-item flex-grow-1"><strong>Meals:</strong>&nbsp;@Context.Session.GetInt32("meals")</p>
+<p class="flex-item flex-grow-1"><strong>Energy:</strong>&nbsp;@Context.Session.GetInt32("energy")</p>  
+    </div>
+
+    <div class="border border-4 p-4 d-flex  align-items-center flex-column">
+    <img  src="~/pexels-simona-kidrič-2607544.jpg" alt=""> 
+    <br>
+    <p>@Context.Session.GetString("phrase")</p>
+
+    </div>
+    <div class="d-flex w-75 justify-content-center gap-4 p-4">
+    <a href="" class="btn btn-success flex-item flex-grow-1">Feed</a>
+    <a href="" class="btn btn-success flex-item flex-grow-1">Play</a>
+    <a href="" class="btn btn-success flex-item flex-grow-1">Work</a>
+    <a href="" class="btn btn-success flex-item flex-grow-1">Sleep</a>
+</div>
+</div>

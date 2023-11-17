@@ -1,51 +1,11 @@
 ﻿@model User
 
 <form method="post" asp-action="Process" asp-controller="Home" class="text-center border border-black p-4 m-5">
-<h1> Enter Your Information :</h1>
-<div class="mb-3 row">
-    <label asp-for="FName" class="col-sm-2 col-form-label fw-bold"></label>
-    <div class="col-sm-10">
-    <input asp-for="FName"  class="form-control">
-    </div>
-<span class="text-danger" asp-validation-for="FName"></span>
-    </div>
-    
-
-<div class="mb-3 row">
-     <label asp-for="LName" class="col-sm-2 col-form-label fw-bold"></label>
-    <div class="col-sm-10">
-    <input asp-for="LName" class="form-control">
-    </div>
-    <span class="text-danger" asp-validation-for="LName"></span>
-    </div>
-    
-
-<div class="mb-3 row">
-     <label asp-for="Age" class="col-sm-2 col-form-label fw-bold"></label>
-    <div class="col-sm-10">
-    <input asp-for="Age" class="form-control">
-    </div> 
-    <span class="text-danger" asp-validation-for="Age"></span>
-    </div>
-
-
-<div class="mb-3 row">
-    <label asp-for="Email" class="col-sm-2 col-form-label fw-bold"></label>
-    <div class="col-sm-10">
-    <input asp-for="Email" class="form-control" >
-    </div> 
-    <span class="text-danger" asp-validation-for="Email"></span>
-    </div>
-
-
-<div class="mb-3 row">
-   <label asp-for="Password" class="col-sm-2 col-form-label fw-bold"></label>
-    <div class="col-sm-10">
-    <input asp-for="Password" class="form-control">
-    </div>
-    <span class="text-danger" asp-validation-for="Password"></span>
-    </div>
-
+<h1> Enter the date :</h1>
+<input asp-for="myDate">
+<br>
+<span class="text-danger" asp-validation-for="myDate"></span>
+<br>
 <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
