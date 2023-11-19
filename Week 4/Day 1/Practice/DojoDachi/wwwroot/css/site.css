@@ -22,3 +22,10 @@ img
   width: 250px;
   height: 200px;
 }
+
+.w-5{
+  width: 130px;
+}
+.w-100{
+  width:100%
+}
