@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\bin\Debug\net6.0\LinQ.exe
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\bin\Debug\net6.0\LinQ.deps.json
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\bin\Debug\net6.0\LinQ.runtimeconfig.json
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\bin\Debug\net6.0\LinQ.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\bin\Debug\net6.0\LinQ.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\LinQ.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\LinQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\LinQ.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\LinQ.AssemblyInfo.cs
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\LinQ.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\LinQ.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\refint\LinQ.dll
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\LinQ.pdb
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\LinQ.genruntimeconfig.cache
+C:\Users\MSI\Desktop\-C-.NET\Week 4\Day 2\Core\LinQ\obj\Debug\net6.0\ref\LinQ.dll
