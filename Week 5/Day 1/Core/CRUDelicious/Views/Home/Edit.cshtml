@@ -1,0 +1,52 @@
+@model Dish
+
+<div class="d-flex flex-column align-items-center">
+<h1>Edit @Model.DishName</h1>
+    <strong><a href="/">Home</a> || <a href="/dishes/new">Add a dish</a></strong>
+
+<br>
+
+<form action="/dishes/@Model.ItemId/edit" method="post"  class="row g-8 w-100 d-flex pl">
+    <div class="w-25">
+
+    <div class="col-12">
+    <label class="form-label fw-bold">Chef's Name :</label>
+    <input asp-for="ChefName" class="form-control w-100">
+    <span asp-validation-for="ChefName" class="text-danger"></span>
+    </div>
+    <br>
+    <div class="col-12">
+    <label class="form-label fw-bold">Name of the Dish :</label>
+    <input asp-for="DishName" class="form-control w-100">
+    <span asp-validation-for="DishName" class="text-danger"></span>
+    </div>
+    <br>
+    <div class="col-12">
+    <label class="form-label fw-bold"># of Calories :</label>
+    <input asp-for="Calories" class="form-control w-100" id="inputAddress2">
+    <span asp-validation-for="Calories" class="text-danger"></span>
+    </div>
+
+    </div>
+    
+    <div class="w-15">
+
+    <div class="col-12">
+    <label class="form-label fw-bold">Tastiness :</label>
+    <input asp-for="Tastiness" class="form-control w-100">
+    <span asp-validation-for="Tastiness" class="text-danger"></span>
+    </div>
+    </div>
+
+    <div class="w-25">
+        <label class="form-label fw-bold">Description :</label>
+        <textarea asp-for="Description"cols="20" rows="8" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <br>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary me-md-2" type="submit">Add a Dish</button>
+        </div>
+    </div>
+
+</form>
+</div>

@@ -1,0 +1,13 @@
+﻿<div class="text-center">
+<h1>Welcome to CRUDelicious</h1>
+    <strong>Home || <a href="/dishes/new">Add a dish</a></strong>
+<br>
+<br>
+<div class="text-start pl" >
+    <p class="text-decoration-underline sl">Check out some recenet Dishes</p>
+    @foreach(Dish one in ViewBag.Dishes){
+        <p><a href="/dishes/@one.ItemId"> @one.DishName</a>&nbsp;&nbsp; by @one.ChefName </p>
+    }
+</div>
+
+</div>
