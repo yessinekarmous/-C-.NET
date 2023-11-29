@@ -1,0 +1,35 @@
+﻿<h2 class="text-center">Chefs&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/dishes">Dishes</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+        href="/chefs/new">Add a Chef</a>&nbsp;&nbsp;
+    |&nbsp;&nbsp;<a href="/dishes/new">Add a Dish</a></h2>
+<br>
+<h3 class="text-center text-decoration-underline">Check out roster of Chefs!</h3>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col"># of Dishes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Chef one in ViewBag.AllChefs){
+        <tr>
+            <td>@one.FName @one.LName</td>
+            <td>@{int x= DateTime.Now.Year-one.Birth.Year ;}
+                @x
+                </td>
+            @* <td>@{DateTime.Now-one.Birth.Year ;}</td> *@
+            <td>
+                @one.ListOfDishes.Count
+                @foreach(var d in one.ListOfDishes){
+                    <li>@d.Name </li>
+                }
+                
+
+                </td>
+        </tr> 
+        }
+    </tbody>  
+
+</table>

@@ -1,0 +1,46 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  width: 1000px;  
+  margin: auto;
+}
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}   
+
+.w-100{
+  width: 100%;
+}
+.h-180{
+  height: 180px;
+}
+.g-8{
+  gap: 80px;
+}
+.w-15{
+  width: 24%;
+}
+
+.pl{
+  padding-left: 180px;
+}
+*{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sl{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,7 +1,8 @@
 @model Dish
 
 <div class="d-flex flex-column align-items-center">
-<h1>Edit @Model.DishName</h1>
+
+<h1>Edit @ViewBag.Name @Model.DishName </h1>
     <strong><a href="/">Home</a> || <a href="/dishes/new">Add a dish</a></strong>
 
 <br>
@@ -44,9 +45,9 @@
         <span asp-validation-for="Description" class="text-danger"></span>
         <br>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" type="submit">Add a Dish</button>
+        <button class="btn btn-primary me-md-2" type="submit">Edit this Dish</button>
         </div>
     </div>
-
+   
 </form>
 </div>

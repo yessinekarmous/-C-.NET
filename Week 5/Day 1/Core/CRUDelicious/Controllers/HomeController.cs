@@ -50,16 +50,20 @@ public class HomeController : Controller
         return RedirectToAction("Index");
     }
 
+
     [HttpGet("dishes/{ItemId}/edit")]
     public IActionResult Update(int ItemId)
     {
         Dish OneDish=_context.Dishes.SingleOrDefault(a=>a.ItemId==ItemId);
+        
         return View("Edit",OneDish);
     }
     [HttpPost("dishes/{ItemId}/edit")]
     public IActionResult EditForm(int ItemId,Dish UpdatedDish)
     {
         Dish OldDish=_context.Dishes.FirstOrDefault(a=>a.ItemId==ItemId);
+
+        // _context.Dishes.FirstOrDefault(a=>a.ItemId==ItemId).DishName=UpdatedDish.DishName;
         if(ModelState.IsValid){
         OldDish.DishName=UpdatedDish.DishName;
         OldDish.ChefName=UpdatedDish.ChefName;
@@ -70,9 +74,9 @@ public class HomeController : Controller
         _context.SaveChanges();
         return RedirectToAction("Index");
         }
-        else{
-            return View("Edit");
-        }
+        ViewBag.Name=OldDish.DishName;
+        return View("Edit",UpdatedDish);
+        
         
     }
     
