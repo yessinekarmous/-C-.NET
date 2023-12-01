@@ -10,6 +10,10 @@ builder.Services.AddDbContext<MyContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
+builder.Services.AddHttpContextAccessor();  // AddHttpContextAccessor gives our views direct access to session so that session data doesn't need to be repeatedly passed into the ViewBag.
+builder.Services.AddSession();
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -20,6 +24,10 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+  // add this line before calling the builder.Build() method
+app.UseSession();    // add this line before calling the app.MapControllerRoute() method
+
+
 app.UseStaticFiles();
 
 app.UseRouting();
