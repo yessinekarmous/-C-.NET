@@ -1,0 +1,45 @@
+@using System.Globalization
+@model Transaction
+<div class="p-4">
+    <h1>Welcome @Context.Session.GetString("username")</h1>
+    @{if(ViewBag.CBalance>0){   
+        <h2 class="text-success">Current Balance @ViewBag.CBalance </h2>
+    }else{
+        <h2 class="text-danger">Current Balance @ViewBag.CBalance </h2>
+    }
+    
+    }
+    
+
+    <form asp-action="myForm" method="post" class="d-flex align-items-center gap-4">
+        <label for="">Deposit/Withdraw</label>
+        <input asp-for="Amount" class="form-control w-25" type="number">
+
+        <input type="submit" class="btn  btn-success">
+        <input type="hidden" asp-for="UserId" value="@Context.Session.GetInt32("userId")" > 
+        <br>
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            
+                @foreach(Transaction t in ViewBag.AllTransactions){
+                    <tr>
+                    <td>$@t.Amount</td>
+                    <td>@t.CreatedAt.ToString("MMM dd yyyy", CultureInfo.InvariantCulture) </td>
+                    </tr>
+                }
+
+            
+
+        </tbody>
+    </table>
+    <a href="/logout" class="btn btn-danger">Logout</a>
+</div>
