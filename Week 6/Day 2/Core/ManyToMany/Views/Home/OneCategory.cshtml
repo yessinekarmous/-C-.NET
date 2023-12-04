@@ -1,0 +1,45 @@
+@model Association
+<div class="d-flex justify-content-center gap-4">
+    <h3><a href="/">Product</a></h3>
+    <div class="vertical-line"></div>
+    <h3><a href="/categories">Category</a></h3>
+</div>
+<br>
+<h2 class="text-center">@ViewBag.OneCategory.Name</h2>
+<br>
+<div class="d-flex w-100 justify-content-center">
+    <div class="w-50">
+        <h3>Products</h3>
+        <ul>
+            @foreach(var prod in ViewBag.OneCategory.myProducts){
+                <li>@prod.Product.Name</li>
+            }
+        </ul>
+    </div>
+    <form method="post" asp-action="AssociationProduct" class="w-50">
+        <h3>Add Product</h3>  
+        <select asp-for="ProductId" class="form-control"> 
+            @foreach(Product p in ViewBag.AllProducts) {
+                bool test = true;
+                @foreach (var my in ViewBag.OneCategory.myProducts)
+                {
+                    if (p.Name == my.Product.Name)
+                    {
+                        test = false;
+                    }
+                }
+                if (test == true)
+                {
+                    <option value="@p.ProductId">@p.Name</option>
+                }
+
+            }
+        </select>   
+        <input asp-for="CategoryId" type="hidden" value="@ViewBag.OneCategory.CategoryId">
+        <br>
+        <input type="submit" class="btn btn-primary" value="Add">
+        
+
+    </form>
+
+</div>

@@ -1,0 +1,43 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.pr{
+  padding-right: 110px;
+}
+.vertical-line {
+  margin-top: 3px;
+  border: 2px solid black; 
+  height: 40px; 
+}
+.vertical-line-2 {
+  margin-top: 20px;
+  /* margin-left: 120 px;  */
+  border: 2px solid black; 
+  height: 540px; 
+}
+.g-4{
+  gap: 15px;
+}
+.w-60{
+  width: 48.3%;
+}
+
