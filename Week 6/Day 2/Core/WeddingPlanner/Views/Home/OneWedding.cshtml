@@ -1,0 +1,19 @@
+@model Wedding
+<div class="d-flex justify-content-between w-100 p-3">
+    <h4>Welcome @Context.Session.GetString("name")</h4>
+    <div>
+        <a href="/weddings">Home</a> &nbsp;|&nbsp;<a href="/weddings/new">Plan a Wedding</a> &nbsp;|&nbsp;<a href="/logout">Logout</a>
+    </div>
+</div>
+<hr class="hr">
+<h2>@Model.WedderOne & @Model.WedderTwo</h2>
+<h5>Date:&nbsp; @Model.Date.ToString("MMM dd yyyy")</h5>
+<h5>Guests:</h5>
+<br>
+<div class="border border-dark w-25">
+    <ul>
+        @foreach(var w in Model.Guests){
+            <li>@w.User.FName @w.User.LName </li>
+        }
+    </ul>
+</div>

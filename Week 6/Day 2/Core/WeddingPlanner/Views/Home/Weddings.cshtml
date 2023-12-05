@@ -1,0 +1,77 @@
+@model Attendance
+<div class="d-flex justify-content-between w-100 p-3">
+    <h4>Welcome @Context.Session.GetString("name")</h4>
+    <div>
+        Home &nbsp;|&nbsp;<a href="/weddings/new">Plan a Wedding</a> &nbsp;|&nbsp;<a href="/logout">Logout</a>
+    </div>
+</div>
+<hr class="hr">
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Wedding of</th>
+            <th scope="col">Date</th>
+            <th scope="col">Guest Count</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var w in ViewBag.AllWeddings)
+        {
+            <tr>
+                <td><a href="/weddings/@w.WeddingId" class="name">@w.WedderOne & @w.WedderTwo</a></td>
+                <td>@w.Date.ToString("MMM dd yyyy")</td>
+                <td>@w.Guests.Count</td>
+                @{
+                    if (w.UserId == Context.Session.GetInt32("userId"))
+                    {
+                        <td><a href="/delete/@w.WeddingId">Delete</a></td>
+
+                    }
+                    else
+                    {
+                        bool test = false;
+                        foreach (var g in w.Guests)
+                        {
+                            if (g.UserId == Context.Session.GetInt32("userId"))
+                            {
+                                test = true;
+                            }
+                        }
+                        if (test == true)
+                        {
+                            @* <td><a href="/deleteAttendance/@w.Guests.AttendanceId">Un-RSVP</a></td> *@
+                            @foreach (var a in ViewBag.AllAtendances)
+                            {
+                                if (a.WeddingId == w.WeddingId && a.UserId == Context.Session.GetInt32("userId"))
+                                {
+                                    <td><a href="/deleteAttendance/@a.AttendanceId">Un-RSVP</a></td>
+                                }
+                            }
+
+
+                        }
+                        else if (test == false)
+                        {
+                            <form method="post" asp-action="Attendance">
+                                <td>
+                                    <input type="hidden" asp-for="WeddingId" value="@w.WeddingId">
+                                    <input type="hidden" asp-for="UserId" value="@Context.Session.GetInt32("userId")">
+                                    <input type="submit" value="RSVP" class="no">
+
+
+                                </td>
+                            </form>
+                        }
+                    }
+                }
+
+
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
