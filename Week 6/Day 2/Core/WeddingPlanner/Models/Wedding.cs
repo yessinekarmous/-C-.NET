@@ -19,6 +19,7 @@ public class Wedding{
     public DateTime CreatedAt{get;set;}=DateTime.Now;
     public DateTime UpdatedAt{get;set;}=DateTime.Now;
 
+    [Required]
     public int UserId{get;set;}
     public User? Creator{get;set;}
 
