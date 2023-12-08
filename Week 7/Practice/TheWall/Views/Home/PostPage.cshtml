@@ -19,31 +19,33 @@
             <button class="btn btn-success me-md-2">Post</button>
         </div>
     </form>
-    @foreach(Message m in ViewBag.AllMessages){
+    @foreach (Message m in ViewBag.AllMessages)
+    {
         <div>
             <h5>
-                @m.Poster.FName - @m.CreatedAt.ToString("MMM dd, yyyy") 
-                @if(@Context.Session.GetInt32("userId")==m.UserId){
+                @m.Poster.FName - @m.CreatedAt.ToString("MMM dd, yyyy")
+                @if (@Context.Session.GetInt32("userId") == m.UserId)
+                {
                     <a href="/delete/@m.MessageId" class="btn btn-danger">Delete Message</a>
                 }
             </h5>
-        <br>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;@m.MessageText </p>
+
+            <p class="ML40">@m.MessageText </p>
         </div>
         <div>
-            @foreach(Comment c in ViewBag.AllComments){
-                <h5>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@c.Commentator.FName -  @c.CreatedAt.ToString("MMM dd, yyyy")  
-                    
-                </h5>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@c.CommentText</p>
-                }
+            @foreach (Comment c in m.MsgComments)
+            {
+                <div class="comment">
+                    <h5>@c.Commentator.FName - @c.CreatedAt.ToString("MMM dd, yyyy")</h5>
+                    <p class="ML40">@c.CommentText</p>
+                </div>
+            }
         </div>
         // question ???????????????? //
         ViewBag.CommentId = m.MessageId;
-        
+
         <partial name="_comment" />
-        
+
     }
 
 
