@@ -1,0 +1,66 @@
+@model Order
+<h5>
+    <a href="/">Dashbord</a>&nbsp;|&nbsp;<a href="/products">Products</a>&nbsp;|&nbsp;Orders&nbsp;|&nbsp;<a href="/customers">Customers</a>
+</h5>
+<br>
+<h2 class="text-decoration-underline">Add a new Order</h2>
+<br>
+<form asp-action="AddOrder" class="w-100" method="post">
+    <div class="d-flex gap-4 align-items-baseline w-100">
+        <label >Product: </label>
+        <select asp-for="ProductId" class="form-control w-25" >
+            @foreach(Product p in ViewBag.AllProducts){
+                <option value="@p.ProductId">@p.Productname</option>
+            }
+            
+        </select>
+        <label >Customer: </label>
+        <select asp-for="CustomerId" class="form-control w-25" >
+            @foreach(Customer c in ViewBag.AllCustomers){
+                <option value="@c.CustomerId">@c.CustomerName</option>
+            }
+            
+        </select>
+        <div class="d-flex flex-column">
+
+        <div class="d-flex align-items-center gap-4">
+        <label>Quantity: </label>
+        <input asp-for="Quantity" class="form-control w-25" value=1>
+        </div>
+        <span class="text-danger fw-bold" asp-validation-for="Quantity"></span>
+        </div>
+
+    
+        
+            
+        
+    </div>
+    <input type="submit" class="btn btn-primary" value="Order">
+</form>
+<br>
+
+<table class="table table-striped w-100">
+    <thead>
+        <tr>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Date</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        
+            @foreach (var o in  ViewBag.AllOrders)
+            {<tr>
+                <td>@o.customer.CustomerName</td>
+                <td>@o.product.Productname</td>
+                <td>@o.Quantity</td>
+                <td>@o.CreatedAt.ToString("MMM dd yyyy")</td>
+            </tr>
+            }
+
+        
+
+    </tbody>
+</table>

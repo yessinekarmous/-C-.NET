@@ -1,0 +1,38 @@
+@model Product
+<h5>
+    <a href="/">Dashbord</a>&nbsp;|&nbsp;Products&nbsp;|&nbsp;<a href="/orders">Orders</a>&nbsp;|&nbsp;<a
+        href="/customers">Customers</a>
+</h5>
+<br>
+<h2 class="text-decoration-underline">Add a new Product</h2>
+<div class="w-100 d-flex gap-5">
+    <form method="post" asp-action="AddProduct" class="w-35">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input asp-for="Productname" class="form-control">
+            <span asp-validation-for="Productname" class="text-danger fw-bold"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Image(URL)</label>
+            <input asp-for="Image" class="form-control">
+            <span asp-validation-for="Image" class="text-danger fw-bold"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Quantity</label>
+            <input asp-for="ProductQuantity" class="form-control">
+            <span asp-validation-for="ProductQuantity" class="text-danger fw-bold"></span>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Create">
+    </form>
+    <div class="w-50 d-flex gap-4">
+        @foreach(Product p in ViewBag.AllProducts){
+            <div class="d-flex flex-column align-items-center">
+                <img src="@p.Image" class="imageP">
+                <p>@p.Productname</p>
+                <p>@p.ProductQuantity left</p>
+            </div>
+            
+        }
+        
+    </div>
+</div>

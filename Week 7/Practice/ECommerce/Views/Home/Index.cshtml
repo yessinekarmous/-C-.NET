@@ -1,0 +1,32 @@
+﻿<h5>
+    Dashbord&nbsp;|&nbsp;<a href="/products">Products</a>&nbsp;|&nbsp;<a href="/orders">Orders</a>&nbsp;|&nbsp;<a
+        href="/customers">Customers</a>
+</h5>
+<br>
+<div class="w-50 d-flex gap-4">
+    @foreach (Product p in ViewBag.Products)
+    {
+        <div class="d-flex flex-column align-items-center">
+            <img src="@p.Image" class="imageP">
+            <p>@p.Productname</p>
+            <p>@p.ProductQuantity left</p>
+        </div>
+
+    }
+</div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a href="/products">Show more Products</a>
+</div>
+
+<br><br>
+<h5 class="text-decoration-underline">Recent Orders</h5>
+@foreach(var o in ViewBag.Orders){
+    <p>&nbsp;&nbsp;@o.customer.CustomerName purchased @o.Quantity @o.product.Productname @((int)(DateTime.Now-(DateTime)@o.CreatedAt).TotalDays) days ago</p>
+}
+&nbsp;&nbsp;<a href="/orders">Show more Orders</a>
+<br><br>
+<h5 class="text-decoration-underline">New Customers</h5>
+@foreach(var c in ViewBag.Customers){
+    <p>&nbsp;&nbsp;@c.CustomerName joined the store @((int)(DateTime.Now-(DateTime)@c.CreatedAt).TotalDays) days ago </p>
+}
+&nbsp;&nbsp;<a href="/customers">Show more Customers</a>

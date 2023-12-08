@@ -1,0 +1,42 @@
+@model Customer
+<h5>
+    <a href="/">Dashbord</a>&nbsp;|&nbsp;<a href="/products">Products</a>&nbsp;|&nbsp;<a
+        href="/orders">Orders</a>&nbsp;|&nbsp;Customers
+</h5>
+<br>
+<h2 class="text-decoration-underline">Add a new Customer</h2>
+<br>
+<form asp-action="AddCustomer" method="post">
+    <div class="d-flex gap-4 align-items-center">
+        <label for="">Customer Name : </label>
+        <input asp-for="CustomerName" class="form-control w-25">
+
+        <input type="submit" class="btn btn-primary" value="Add">
+    </div>
+
+    <span asp-validation-for="CustomerName" class="text-danger fw-bold"></span>
+</form>
+<br>
+<table class="table table-striped w-75">
+    <thead>
+        <tr>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Joined on</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        
+            @foreach (Customer c in ViewBag.AllCustomers)
+            {<tr>
+                <td>@c.CustomerName</td>
+                <td>@c.CreatedAt.ToString("MMM dd yyyy")</td>
+                <td><a href="/delete/@c.CustomerId" class="btn btn-danger">Remove</a></td>
+            </tr>
+            }
+
+        
+
+    </tbody>
+</table>
