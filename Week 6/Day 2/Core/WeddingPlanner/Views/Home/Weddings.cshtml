@@ -40,28 +40,13 @@
                         }
                         if (test == true)
                         {
-                            @* <td><a href="/deleteAttendance/@w.Guests.AttendanceId">Un-RSVP</a></td> *@
-                            @foreach (var a in ViewBag.AllAtendances)
-                            {
-                                if (a.WeddingId == w.WeddingId && a.UserId == Context.Session.GetInt32("userId"))
-                                {
-                                    <td><a href="/deleteAttendance/@a.AttendanceId">Un-RSVP</a></td>
-                                }
-                            }
-
-
+                            <td><a href="/deleteAttendance/@w.WeddingId">Un-RSVP</a></td>
+                            
                         }
                         else if (test == false)
                         {
-                            <form method="post" asp-action="Attendance">
-                                <td>
-                                    <input type="hidden" asp-for="WeddingId" value="@w.WeddingId">
-                                    <input type="hidden" asp-for="UserId" value="@Context.Session.GetInt32("userId")">
-                                    <input type="submit" value="RSVP" class="no">
-
-
-                                </td>
-                            </form>
+                            <td><a href="/assist/@w.WeddingId">RSVP</a></td>
+                            
                         }
                     }
                 }

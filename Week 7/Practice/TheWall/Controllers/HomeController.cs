@@ -88,6 +88,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult PostComment(Comment newComment){
         if(ModelState.IsValid){
+            newComment.UserId=(int)HttpContext.Session.GetInt32("userId");
             _context.Add(newComment);
             _context.SaveChanges();
             return RedirectToAction("PostPage");
@@ -99,6 +100,12 @@ public class HomeController : Controller
     [HttpGet("delete/{id}")]
     public IActionResult DeleteMessage(int id){
         Message msgToRemove=_context.Messages.FirstOrDefault(m=>m.MessageId==id);
+        if(HttpContext.Session.GetInt32("userId")==null){
+            return RedirectToAction("PostPage");
+        }
+        if(msgToRemove.UserId!=HttpContext.Session.GetInt32("userId")){
+            return RedirectToAction("Logout");
+        }
         _context.Remove(msgToRemove);
         _context.SaveChanges();
         return RedirectToAction("PostPage");

@@ -98,21 +98,26 @@ public class HomeController : Controller
         }
         return View("WeddingForm");
     }
-    [HttpPost]
-    public IActionResult Attendance(Attendance newAttendance){
+    [HttpGet("assist/{id}")]
+    public IActionResult Attendance(int id){
         if(HttpContext.Session.GetInt32("userId")==null){
             return RedirectToAction("Index");
         }
-        _context.Add(newAttendance);
+        Attendance newOne= new Attendance{
+            UserId=(int)HttpContext.Session.GetInt32("userId"),
+            WeddingId=id
+        };
+        _context.Attendances.Add(newOne);
         _context.SaveChanges();
         return RedirectToAction("Weddings");
     }
+
     [HttpGet("deleteAttendance/{id}")]
     public IActionResult DeleteAttendance(int id){
         if(HttpContext.Session.GetInt32("userId")==null){
             return RedirectToAction("Index");
         }
-        Attendance attendanceToDelete=_context.Attendances.FirstOrDefault(a=>a.AttendanceId==id);
+        Attendance attendanceToDelete=_context.Attendances.Where(w=>w.WeddingId==id).FirstOrDefault(u=>u.UserId==HttpContext.Session.GetInt32("userId"));
         _context.Remove(attendanceToDelete);
         _context.SaveChanges();
         return RedirectToAction("Weddings");
