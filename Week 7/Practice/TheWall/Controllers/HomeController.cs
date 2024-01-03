@@ -81,7 +81,7 @@ public class HomeController : Controller
             return RedirectToAction("PostPage");
         }
         ViewBag.AllMessages=_context.Messages.Include(u=>u.Poster).OrderBy(m=>m.CreatedAt).ToList();
-        ViewBag.AllComments=_context.Comments.Include(u=>u.Commentator).OrderBy(m=>m.CreatedAt).ToList();
+
         return View("PostPage");
     }
     
@@ -94,7 +94,7 @@ public class HomeController : Controller
             return RedirectToAction("PostPage");
         }
         ViewBag.AllMessages=_context.Messages.Include(u=>u.Poster).OrderBy(m=>m.CreatedAt).ToList();
-        ViewBag.AllComments=_context.Comments.Include(u=>u.Commentator).OrderBy(m=>m.CreatedAt).ToList();
+
         return View("PostPage");
     }
     [HttpGet("delete/{id}")]

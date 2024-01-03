@@ -1,0 +1,30 @@
+<div>
+    <div class="w-100 d-flex justify-content-between">
+        <h2>Manage Users</h2>
+        <a href="/add" class="btn btn-primary">Add new</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Created At</th>
+                <th scope="col">User Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(User u in ViewBag.AllUsers){
+                <tr>
+                    <th scope="row">@u.UserId</th>
+                    <td><a href="/users/show/@u.UserId">@u.FName @u.LName</a></td>
+                    <td>@u.Email</td>
+                    <td>@u.CreatedAt</td>
+                    <td>@u.UserLevel</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>

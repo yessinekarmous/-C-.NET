@@ -23,7 +23,17 @@
     {
         <div>
             <h5>
-                @m.Poster.FName - @m.CreatedAt.ToString("MMM dd, yyyy")
+                @m.Poster.FName -
+                @if((DateTime.Now-(DateTime)@m.CreatedAt).TotalSeconds<59){
+                    <p>@((int)(DateTime.Now-(DateTime)@m.CreatedAt).TotalSeconds) seconds</p>
+                }else if((DateTime.Now-(DateTime)@m.CreatedAt).TotalMinutes<59){
+                        <p>@((int)(DateTime.Now-(DateTime)@m.CreatedAt).TotalMinutes) minutes</p>
+                }else if((DateTime.Now-(DateTime)@m.CreatedAt).TotalHours<24){
+                    <p>@((int)(DateTime.Now-(DateTime)@m.CreatedAt).TotalHours) hours</p>
+                }
+                else if((DateTime.Now-(DateTime)@m.CreatedAt).TotalDays>1){
+                    <p>@m.CreatedAt @((int)(DateTime.Now-(DateTime)@m.CreatedAt).TotalDays) days</p>
+                }else 
                 @if (@Context.Session.GetInt32("userId") == m.UserId)
                 {
                     <a href="/delete/@m.MessageId" class="btn btn-danger">Delete Message</a>
@@ -38,6 +48,7 @@
                 <div class="comment">
                     <h5>@c.Commentator.FName - @c.CreatedAt.ToString("MMM dd, yyyy")</h5>
                     <p class="ML40">@c.CommentText</p>
+                    <h6>@c.MessageId</h6>
                 </div>
             }
         </div>

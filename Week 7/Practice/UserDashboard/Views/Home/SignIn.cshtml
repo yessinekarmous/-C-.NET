@@ -1,0 +1,24 @@
+@model LogUser
+<form asp-action="Login" asp-controller="Home" class="w-100">
+    <h3>Sign In :</h3>
+    <div class="mb-3 w-100  ">
+        <label class="col-sm-2 col-form-label w-100">Email Address :</label>
+        <div >
+            <input asp-for="LogEmail" class="form-control w-25">
+            <span class="text-danger fw-bold" asp-validation-for="LogEmail"></span>
+        </div>
+    </div>
+    <div class="mb-3 w-100  ">
+        <label class="col-sm-2 col-form-label">Password :</label>
+        <div>
+            <input asp-for="LogPassword" class="form-control w-25">
+            <span class="text-danger fw-bold" asp-validation-for="LogPassword"></span>
+        </div>
+    </div>
+    <div class="w-25 d-grid gap-2 d-md-flex justify-content-md-end">
+        <input class="btn btn-success" value="Sign In" type="submit">
+    </div>
+    <br>
+    <a href="/register">Don't have an account ? Register</a>
+
+</form>
