@@ -1,0 +1,44 @@
+@model Evaluation
+<div class="d-flex flex-wrap w-100">
+    <div class="d-flex flex-column dash">
+        <a class="btn btn btn-outline-primary" href="/myCalendar">Book an appointment</a>
+        <a class="btn btn btn-outline-primary" href="/history">Appointment history</a>
+        <a class="btn btn-primary">Evaluation</a>
+    </div>
+    <div class="evaluationsPage">
+        <form method="post" asp-action="AddEvaluation" class="d-flex flex-column gap-2">
+            <p class="text-dark">Post a comment that other clients can see !</p>
+            <input asp-for="EvaluationText" class="form-control w-100">
+            <span asp-validation-for="EvaluationText" class="text-danger"></span>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <input type="submit" class="btn btn-success w-10" value="Add">
+            </div>
+        </form>
+
+        <div class="d-flex flex-column gap-4">
+            @foreach (var c in ViewBag.AllComments)
+            {
+                if (Context.Session.GetInt32("userId") == c.UserId)
+                {
+
+                    <div>
+                        <p class="ptagComment text-success">
+                            -@c.EvaluationText &nbsp; <a href="/deleteComment/@c.EvaluationId"
+                                class="btn btn-danger deletebtn">delete</a>
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <p class="ptagComment text-dark">
+                            -@c.EvaluationText
+                        </p>
+
+                    </div>
+                }
+            }
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,231 @@
+@model DatePick
+
+
+
+<div class="d-flex flex-wrap w-100">
+    <div class="d-flex flex-column dash">
+        <a class="btn btn-primary">Book an appointment</a>
+        <a class="btn btn btn-outline-primary" href="/history">Appointment history</a>
+        <a class="btn btn btn-outline-primary" href="/evaluations">Evaluation</a>
+    </div>
+
+    <div class="HistoryPage d-flex flex-column gap-4">
+        <div class="w-100 d-flex justify-content-center">
+            <form method="post" asp-action="GetDate" class="d-flex flex-wrap flex-column w-50 gap-4">
+                <input class="form-control" asp-for="TheDate" type="date">
+                <span class="text-danger" asp-validation-for="TheDate"></span>
+                <button type="submit" class="btn btn-success">Ok</button>
+            </form>
+        </div>
+        @if (ViewBag.ShowDate != null)
+        {
+
+
+            <div class="text-center">
+                <h5 class="text-dark "><strong>Date picked :</strong> @ViewBag.ShowDate.ToString("dd/MM/yyyy")</h5>
+            </div>
+
+            int j = 0;
+
+            <table class="table table-hover w-100">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Time</th>
+                        <th>Availability</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        TimeOnly timeToShow = new TimeOnly(8, 0);
+                    }
+                    @{
+                        for (int i = 0; i < 8; i++)
+                        {
+                            ///// One Line //////
+                            <tr>
+
+                                <th class="text-dark">@{
+                                        @j
+                                        j++;
+                                    }
+                                </th>
+
+                                <td>@timeToShow.Hour:@if (timeToShow.Minute == 0)
+                                    {
+                                        <span class="text-dark">00</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-dark">@timeToShow.Minute</span>
+                                    }
+                                    =>
+                                    @timeToShow.AddMinutes(30).Hour:@if (timeToShow.AddMinutes(30).Minute == 0)
+                                    {
+                                        <span class="text-dark">00</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-dark">@timeToShow.AddMinutes(30).Minute</span>
+                                    }
+
+
+                                </td>
+                                @{
+                                    bool test = false;
+                                    bool isMe = false;
+                                    for (int k = 0; k < ViewBag.AllAppointment.Count; k++)
+                                    {
+                                        if ((ViewBag.AllAppointment[k].Time.Hour == timeToShow.Hour) &&
+                                        (ViewBag.AllAppointment[k].Time.Minute == timeToShow.Minute))
+                                        {
+                                            test = true;
+                                            if (ViewBag.AllAppointment[k].UserId == Context.Session.GetInt32("userId"))
+                                            {
+                                                isMe = true;
+                                            }
+                                        }
+
+                                    }
+                                    ////////// here////////
+                                    if (test == true && isMe == false)
+                                    {
+
+                                        <td class="text-danger"> Booked </td>
+                                        <td class="bg-danger"></td>
+                                    }
+                                    else if (test == true && isMe)
+                                    {
+
+                                        <td class="text-info">My Appointment</td>
+                                        <td class="bg-info"></td>
+                                    }
+                                    else
+                                    {
+                                        <td class="text-success"> Free </td>
+                                        <td class="bg-success text-center">
+                                            <form method="post" class="w-100" asp-action="BookingAction">
+                                                <input type="hidden" name="DatePicked" value="@Model.TheDate">
+                                                <input type="hidden" name="TimePicked" value="@timeToShow">
+                                                <button type="submit" class="btn btn-success w-100">Book</button>
+                                            </form>
+                                        </td>
+                                    }
+                                }
+                                @{
+                                    timeToShow = timeToShow.AddMinutes(30);
+
+                                }
+                            </tr>
+
+                        }
+                    }
+
+                    <tr>
+                        <td class="bg-info">Afternoon</td>
+                    </tr>
+
+                    @{
+                        TimeOnly timeToShowAfternoon = new TimeOnly(14, 0);
+                    }
+                    @{
+                        for (int i = 0; i < 8; i++)
+                        {
+                            ///// One Line //////
+                            <tr>
+
+                                <th class="text-dark">@{
+                                        @j
+                                        j++;
+                                    }
+                                </th>
+
+                                <td>@timeToShowAfternoon.Hour:@if (timeToShowAfternoon.Minute == 0)
+                                    {
+                                        <span class="text-dark">00</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-dark">@timeToShowAfternoon.Minute</span>
+                                    }
+                                    =>
+                                    @timeToShowAfternoon.AddMinutes(30).Hour:@if (timeToShowAfternoon.AddMinutes(30).Minute == 0)
+                                    {
+                                        <span class="text-dark">00</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-dark">@timeToShowAfternoon.AddMinutes(30).Minute</span>
+                                    }
+
+
+                                </td>
+                                @{
+                                    bool test = false;
+                                    bool isMe = false;
+                                    for (int k = 0; k < ViewBag.AllAppointment.Count; k++)
+                                    {
+                                        if ((ViewBag.AllAppointment[k].Time.Hour == timeToShowAfternoon.Hour) &&
+                                        (ViewBag.AllAppointment[k].Time.Minute == timeToShowAfternoon.Minute))
+                                        {
+                                            test = true;
+                                            if (ViewBag.AllAppointment[k].UserId == Context.Session.GetInt32("userId"))
+                                            {
+                                                isMe = true;
+                                            }
+                                        }
+
+                                    }
+                                    ////////// here////////
+                                    if (test == true && isMe == false)
+                                    {
+
+                                        <td class="text-danger"> Booked </td>
+                                        <td class="bg-danger"></td>
+                                    }
+                                    else if (test == true && isMe)
+                                    {
+
+                                        <td class="text-info">My Appointment</td>
+                                        <td class="bg-info"></td>
+                                    }
+                                    else
+                                    {
+                                        <td class="text-success"> Free </td>
+                                        <td class="bg-success text-center">
+                                            <form method="post" class="w-100" asp-action="BookingAction">
+                                                <input type="hidden" name="DatePicked" value="@Model.TheDate">
+                                                <input type="hidden" name="TimePicked" value="@timeToShowAfternoon">
+                                                <button type="submit" class="btn btn-success w-100">Book</button>
+                                            </form>
+                                        </td>
+                                    }
+                                }
+
+                                @{
+                                    timeToShowAfternoon = timeToShowAfternoon.AddMinutes(30);
+                                }
+
+
+
+
+
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+
+
+        }
+        else
+        {
+            <div class="pickDateFirst">
+                <h1 class="text-success"> Pick a Date first </h1>
+            </div>
+        }
+    </div>
+
+
+</div>

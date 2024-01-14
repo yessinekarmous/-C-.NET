@@ -1,0 +1,41 @@
+@model Appointment
+<div class="d-flex flex-wrap">
+    <div class="d-flex flex-column dash">
+        <a class="btn btn-outline-primary" href="/admin/calendar">Manage appointments</a>
+        <a class="btn btn-outline-primary" href="/admin/allUsers">All Users</a>
+        <a class="btn btn-outline-primary" href="/admin/evaluations">Evaluations</a>
+    </div>
+    <div class="AddAppPage d-flex flex-wrap justify-content-center gap-5 ">
+        <h1 class="text-dark w-100">Add or Lock an appointment</h1>
+        <form method="post" asp-action="AddAppointment" class="w-40 d-flex flex-wrap">
+            <div class="w-100 d-flex align-items-center">
+                <h5 class="text-dark w-50">Choose the User</h5>
+                <select asp-for="UserId" class="form-control w-50">
+                    @foreach (User u in ViewBag.allUsers)
+                    {
+                        <option value="@u.UserId">@u.FName @u.LName</option>
+                    }
+
+                </select>
+            </div>
+            <div class="w-100 d-flex align-items-center">
+                <h5 class="text-dark w-50">Choose the Date</h5>
+                <input asp-for="Time" class="w-50">
+
+            </div>
+            <button class="hed gap-2 col-3 mx-auto btn btn-primary">Submit</button>
+        </form>
+        <div class="Line"></div>
+        <form method="post" asp-action="AddAppointment"
+            class="w-40 lock d-flex flex-column gap-4 justify-content-center">
+            <input asp-for="UserId" type="hidden" value="@Context.Session.GetInt32("userId")">
+            <input asp-for="Time" class="w-100">
+            <button class="btn btn-danger hed w-100">Lock this Date</button>
+        </form>
+        <div class="w-100 text-center">
+            <span asp-validation-for="Time" class="text-danger"></span>
+
+        </div>
+    </div>
+
+</div>

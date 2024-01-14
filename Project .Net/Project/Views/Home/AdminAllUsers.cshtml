@@ -1,0 +1,38 @@
+<div class="d-flex flex-wrap">
+    <div class="d-flex flex-column dash">
+        <a class="btn btn-outline-primary " href="/admin/calendar">Manage appointments</a>
+        <a class="btn btn-primary">All Users</a>
+        <a class="btn btn-outline-primary" href="/admin/evaluations">Evaluations</a>
+    </div>
+    <div class="UsersTable w-75">
+        <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Age</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(User u in ViewBag.AllUsers){
+                <tr>
+                    <th scope="row">@u.UserId</th>
+                    <td><a href="/admin/user/@u.UserId">@u.FName @u.LName</a></td>
+                    <td>@u.Email</td>
+                    <td>@(DateTime.Now.Year - ((DateTime)u.Birthdate).Year)</td>
+                    <td><a class="text-danger" href="/deleteUser/@u.UserId">
+                            <i class="zmdi zmdi-delete zmdi-hc-2x"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+            
+
+        </tbody>
+        </table>
+
+    </div>
+    
+</div>

@@ -1,0 +1,238 @@
+@model DatePickAdmin
+
+
+
+<div class="d-flex flex-wrap w-100">
+    <div class="d-flex flex-column dash">
+        <a class="btn btn-primary">Manage appointments</a>
+        <a class="btn btn btn-outline-primary" href="/admin/allUsers">All Users</a>
+        <a class="btn btn btn-outline-primary" href="/admin/evaluations">Evaluations</a>
+
+    </div>
+
+    <div class="HistoryPageAdmin d-flex flex-column gap-4">
+        <div class="w-100 d-flex justify-content-center">
+            <form method="post" asp-action="GetDateAdmin" class="d-flex flex-wrap flex-column w-50 gap-4">
+                <input class="form-control" asp-for="TheDate" type="date">
+                <span class="text-danger" asp-validation-for="TheDate"></span>
+                <button type="submit" class="btn btn-success">Ok</button>
+            </form>
+        </div>
+        @if (ViewBag.ShowDate != null)
+        {
+
+
+            <div class="text-center">
+                <h5 class="text-dark "><strong>Date picked :</strong> @ViewBag.ShowDate.ToString("dd/MM/yyyy")</h5>
+            </div>
+
+            int j = 0;
+
+            <table class="table table-hover w-100 text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Time</th>
+                        <th class="text-center">Availability</th>
+                        <th>Username</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        TimeOnly timeToShow = new TimeOnly(8, 0);
+                    }
+                    @{
+                        for (int i = 0; i < 8; i++)
+                        {
+                            ///// One Line //////
+                            <tr>
+
+                                <th class="text-dark">@{
+                                        @j
+                                        j++;
+                                    }
+                                </th>
+
+                                <td>@timeToShow.Hour:@if (timeToShow.Minute == 0)
+                                    {
+                                        <span class="text-dark">00</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-dark">@timeToShow.Minute</span>
+                                    }
+                                    =>
+                                    @timeToShow.AddMinutes(30).Hour:@if (timeToShow.AddMinutes(30).Minute == 0)
+                                    {
+                                        <span class="text-dark">00</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-dark">@timeToShow.AddMinutes(30).Minute</span>
+                                    }
+
+
+                                </td>
+                                @{
+                                    bool test = false;
+                                    bool isAdmin = false;
+                                    int index = 0;
+                                    int id = 0;
+                                    for (int k = 0; k < ViewBag.AllAppointment.Count; k++)
+                                    {
+                                        if ((ViewBag.AllAppointment[k].Time.Hour == timeToShow.Hour) &&
+                                        (ViewBag.AllAppointment[k].Time.Minute == timeToShow.Minute))
+                                        {
+                                            test = true;
+                                            index = k;
+                                            id = ViewBag.AllAppointment[k].AppointmentId;
+                                            if (ViewBag.AllAppointment[k].UserId == Context.Session.GetInt32("userId"))
+                                            {
+                                                isAdmin = true;
+                                            }
+                                        }
+
+                                    }
+                                    ////////// here////////
+                                    if (test == true && isAdmin == false)
+                                    {
+
+                                        <td class="bg-success">Already Booked </td>
+                                        <td>@ViewBag.AllAppointment[index].Client.FName @ViewBag.AllAppointment[index].Client.LName</td>
+                                        <td><a href="/admin/appointment/@id" class="text-success">More</a></td>
+                                    }
+                                    else if (test == true && isAdmin == true)
+                                    {
+
+                                        <td class="bg-info">Locked by the Admin</td>
+                                        <td></td>
+                                        <td><a href="/admin/appointment/@id" class="text-success">More</a></td>
+                                    }
+                                    else
+                                    {
+                                        <td class="bg-danger">Free </td>
+                                        <td></td>
+                                        <td></td>
+                                    }
+                                }
+                                @{
+                                    timeToShow = timeToShow.AddMinutes(30);
+
+                                }
+
+
+
+                            </tr>
+
+                        }
+                    }
+
+                    <tr>
+                        <td class="bg-info">Afternoon</td>
+                    </tr>
+
+                    @{
+                        TimeOnly timeToShowAfternoon = new TimeOnly(14, 0);
+                    }
+                    @{
+                        for (int i = 0; i < 8; i++)
+                        {
+                            ///// One Line //////
+                            <tr>
+
+                                <th class="text-dark">@{
+                                        @j
+                                        j++;
+                                    }
+                                </th>
+
+                                <td>@timeToShowAfternoon.Hour:@if (timeToShowAfternoon.Minute == 0)
+                                    {
+                                        <span class="text-dark">00</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-dark">@timeToShowAfternoon.Minute</span>
+                                    }
+                                    =>
+                                    @timeToShowAfternoon.AddMinutes(30).Hour:@if (timeToShowAfternoon.AddMinutes(30).Minute == 0)
+                                    {
+                                        <span class="text-dark">00</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-dark">@timeToShowAfternoon.AddMinutes(30).Minute</span>
+                                    }
+
+
+                                </td>
+                                @{
+                                    bool test = false;
+                                    bool isAdmin = false;
+                                    int index = 0;
+                                    int id = 0;
+                                    for (int k = 0; k < ViewBag.AllAppointment.Count; k++)
+                                    {
+                                        if ((ViewBag.AllAppointment[k].Time.Hour == timeToShowAfternoon.Hour) &&
+                                        (ViewBag.AllAppointment[k].Time.Minute == timeToShowAfternoon.Minute))
+                                        {
+                                            test = true;
+                                            index = k;
+                                            id = ViewBag.AllAppointment[k].AppointmentId;
+                                            if (ViewBag.AllAppointment[k].UserId == Context.Session.GetInt32("userId"))
+                                            {
+                                                isAdmin = true;
+                                            }
+                                        }
+
+                                    }
+                                    ////////// here////////
+                                    if (test == true && isAdmin == false)
+                                    {
+
+                                        <td class="bg-success">Already Booked </td>
+                                        <td>@ViewBag.AllAppointment[index].Client.FName @ViewBag.AllAppointment[index].Client.LName</td>
+                                        <td><a href="/admin/appointment/@id" class="text-success">More</a></td>
+                                    }
+                                    else if (test == true && isAdmin == true)
+                                    {
+
+                                        <td class="bg-info">Locked by the Admin</td>
+                                        <td></td>
+                                        <td><a href="/admin/appointment/@id" class="text-success">More</a></td>
+                                    }
+                                    else
+                                    {
+                                        <td class="bg-danger">Free </td>
+                                        <td></td>
+                                        <td></td>
+                                    }
+                                }
+                                @{
+                                    timeToShowAfternoon = timeToShowAfternoon.AddMinutes(30);
+
+                                }
+
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+
+
+        }
+        else
+        {
+            <div class="pickDateFirst2">
+                <h1 class="text-success"> Search for your date Sir </h1>
+            </div>
+        }
+    </div>
+    <div class="SuggCreate d-flex flex-column align-items-center ">
+        <p class="text-dark">If you want to add an appointment or lock a date just click here</p>
+        <a href="/admin/create" class="btn btn-primary">Go</a>
+    </div>
+
+
+</div>

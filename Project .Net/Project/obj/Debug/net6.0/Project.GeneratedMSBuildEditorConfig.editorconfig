@@ -8,37 +8,73 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project
 build_property.RootNamespace = Project
-build_property.ProjectDir = C:\Users\MSI\Desktop\Project .Net\Project\
+build_property.ProjectDir = C:\Users\MSI\Desktop\-C-.NET\Project .Net\Project\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\MSI\Desktop\Project .Net\Project
+build_property.MSBuildProjectDirectory = C:\Users\MSI\Desktop\-C-.NET\Project .Net\Project
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/MSI/Desktop/Project .Net/Project/Views/Home/Index.cshtml]
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/AdminAddApp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbkFkZEFwcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/AdminAllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbkFsbFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/AdminEvaluations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbkV2YWx1YXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/AdminOneUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbk9uZVVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/AdminShowOne.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblNob3dPbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/Ahistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBaGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxib29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/Evaluations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFdmFsdWF0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MSI/Desktop/Project .Net/Project/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/LandingPageAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMYW5kaW5nUGFnZUFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MSI/Desktop/Project .Net/Project/Views/Shared/Error.cshtml]
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MSI/Desktop/Project .Net/Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MSI/Desktop/Project .Net/Project/Views/_ViewImports.cshtml]
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MSI/Desktop/Project .Net/Project/Views/_ViewStart.cshtml]
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MSI/Desktop/Project .Net/Project/Views/Shared/_Layout.cshtml]
+[C:/Users/MSI/Desktop/-C-.NET/Project .Net/Project/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9q8ibpt6yd

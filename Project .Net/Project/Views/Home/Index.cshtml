@@ -1,8 +1,76 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model User
+<div class="main">
+  <div class="container">
+    <div class="signup-content">
+      <div class="signup-img">
+        <img src="images/form-img.jpg" alt="">
+        <div class="signup-img-content">
+          <h2>Register now </h2>
+          <p>while seats are available !</p>
+        </div>
+      </div>
+      <div class="signup-form">
+        <form method="POST" asp-action="Register" class="register-form" id="register-form">
+          <div class="form-row">
+            <div class="form-group">
+              <div class="form-input">
+                <label class="required">First name</label>
+                <input asp-for="FName"/>
+                <span asp-validation-for="FName" class="text-danger"></span>
+              </div>
+              <div class="form-input">
+                <label class="required">Last name</label>
+                <input asp-for="LName" />
+                <span asp-validation-for="LName" class="text-danger"></span>
+              </div>
+              <div class="form-input">
+                <label class="required">Email</label>
+                <input asp-for="Email"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
+              </div>
+              <div class="form-input">
+                <label class="required">Password</label>
+                <input  asp-for="Password"  />
+                <span asp-validation-for="Password" class="text-danger"></span>
+              </div>
+              <div class="form-input">
+                <label class="required">Confirm Password</label>
+                <input asp-for="ConfirmPassword"/>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-input">
+                <label class="required">Phone number</label>
+                <input asp-for="PhoneNumber"/>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                <br>
+                <input asp-for="ExtraPhoneNumber" placeholder="You can put an extra Phone number " />
+              </div>
+              <div class="form-input">
+                <label  class="required">Address</label>
+                <input asp-for="Address" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+              </div>
+              <div class="form-input">
+                <label class="required">Date of Birth</label>
+                <input asp-for="Birthdate"/>
+                <span asp-validation-for="Birthdate" class="text-danger"></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-submit">
+            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+          </div>
+        </form>
+        <div class="Already">
+          <p class="text-dark">Already have an Account ?</p>
+          <a href="/login">Login</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

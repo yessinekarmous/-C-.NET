@@ -1,0 +1,124 @@
+<div class="d-flex flex-wrap w-100">
+    <div class="d-flex flex-column dash">
+        <a class="btn btn btn-outline-primary" href="/MyCalendar">Book an appointment</a>
+        <a class="btn btn-primary">Appointment history</a>
+        <a class="btn btn btn-outline-primary" href="/evaluations">Evaluation</a>
+    </div>
+    <div class="HistoryPage ">
+        @{
+            int i = 0;
+        }
+        <h3>Previous</h3>
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Day</th>
+                    <th scope="col">Month</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th class="text-center">Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Appointment a in ViewBag.MyAppointmentsPast)
+                {
+                    <tr>
+                        <th class="text-dark">@{
+                                @i
+                                i++;
+                            } </th>
+
+                        <td>@a.Time.DayOfWeek</td>
+                        <td>@a.Time.ToString("MMMM", new System.Globalization.CultureInfo("en-US"))</td>
+                        <td>@a.Time.Date.ToString("dd/MM/yyyy") </td>
+                        <td>@a.Time.Hour:@if (a.Time.Minute == 0)
+                            {
+                                <span class="text-dark">00</span>
+                            }
+                            else
+                            {
+                                <span class="text-dark">@a.Time.Minute</span>
+                            }
+                            =>
+                            @a.Time.AddMinutes(30).Hour:@if (a.Time.AddMinutes(30).Minute == 0)
+                            {
+                                <span class="text-dark">00</span>
+                            }
+                            else
+                            {
+                                <span class="text-dark">@a.Time.AddMinutes(30).Minute</span>
+                            }
+
+
+                        </td>
+                        @if (a.Attendance == "absent")
+                        {
+                            <td class="bg-danger">absent</td>
+                        }
+                        else
+                        {
+                            <td class="bg-success">present</td>
+                        }
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br>
+        <h3>Upcoming</h3>
+        @{
+            int j = 0;
+        }
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Day</th>
+                    <th scope="col">Month</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th class="text-center">Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Appointment a in ViewBag.MyAppointmentsFutur)
+                {
+                    <tr>
+                        <th class="text-dark">@{
+                                @j
+                                j++;
+                            } </th>
+
+                        <td>@a.Time.DayOfWeek</td>
+                        <td>@a.Time.ToString("MMMM", new System.Globalization.CultureInfo("en-US"))</td>
+                        <td>@a.Time.Date.ToString("dd/MM/yyyy") </td>
+                        <td>@a.Time.Hour:@if (a.Time.Minute == 0)
+                            {
+                                <span class="text-dark">00</span>
+                            }
+                            else
+                            {
+                                <span class="text-dark">@a.Time.Minute</span>
+                            }
+                            =>
+                            @a.Time.AddMinutes(30).Hour:@if (a.Time.AddMinutes(30).Minute == 0)
+                            {
+                                <span class="text-dark">00</span>
+                            }
+                            else
+                            {
+                                <span class="text-dark">@a.Time.AddMinutes(30).Minute</span>
+                            }
+
+
+                        </td>
+                        <td class="bg-info">Pending</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

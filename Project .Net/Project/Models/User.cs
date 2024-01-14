@@ -3,9 +3,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Project.Models;
 
-public enum Role{
-    admin,client
-}
 public class User{
 
     [Key]
@@ -38,8 +35,9 @@ public class User{
     public string Address{get;set;}
 
     [Required(ErrorMessage ="The Date of birth is required")]
-    [FutureDate]
+    [PastDate]
     public DateTime Birthdate{get;set;}
+    public string UserRole{get;set;}="user";
 
     public DateTime CreatedAt{get;set;}=DateTime.Now;
     public DateTime UpdatedAt{get;set;}=DateTime.Now;
@@ -47,7 +45,6 @@ public class User{
     public List<Appointment> myAppointments{get;set;}=new List<Appointment>();
     public List<Evaluation> myEvaluations{get;set;}=new List<Evaluation>();
 
-    public Role UserRole{get;set;}=Role.admin;
 
 
 }

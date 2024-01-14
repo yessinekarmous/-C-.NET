@@ -1,0 +1,28 @@
+<div class="d-flex flex-wrap">
+    <div class="d-flex flex-column dash">
+        <a class="btn btn-outline-primary" href="/admin/calendar">Manage appointments</a>
+        <a class="btn btn-outline-primary" href="/admin/allUsers">All Users</a>
+        <a class="btn btn-primary">Evaluations</a>
+    </div>
+    @if (ViewBag.AllEvaluations.Count > 0)
+    {
+        <div class="AllEvaluations w-50 d-flex flex-wrap gap-5">
+            @foreach (Evaluation e in ViewBag.AllEvaluations)
+            {
+                <div class="w-40">
+                    <h4 class="text-dark"><a class="text-dark" href="/admin/user/@e.Creator.UserId">@e.Creator.FName
+                            @e.Creator.LName</a></h4>
+                    <p class="text-dark">&nbsp;&nbsp;@e.EvaluationText</p>
+                    <a href="/deleteComment/@e.EvaluationId" class="btn btn-danger">Delete </a>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="NoForNow">
+            <h1 class="text-danger">No Evaluations for Now</h1>
+        </div>
+    }
+
+</div>
